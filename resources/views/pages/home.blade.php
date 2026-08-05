@@ -4,11 +4,9 @@
     <div class="hero-media"><video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="{{ asset('weddingimg.webp') }}"><source src="{{ asset('herovideo.mp4') }}" type="video/mp4"></video></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-        <p class="eyebrow light reveal">A distinguished London venue</p>
         <div class="hero-stars reveal delay-1" aria-label="Five star venue">★★★★★</div>
         <h1 class="reveal delay-1">Welcome to a luxury wedding<br><em>venue like no other.</em></h1>
-        <p class="hero-copy reveal delay-2">An exceptional setting for weddings, corporate occasions and unforgettable private celebrations.</p>
-        <div class="hero-buttons reveal delay-3"><a class="button" href="#hero-enquiry">Check availability <span>↗</span></a><a class="text-link light" href="#welcome">Explore the venue <span>↓</span></a></div>
+        <div class="hero-buttons reveal delay-2"><a class="button" href="#hero-enquiry">Check availability <span>↗</span></a><a class="text-link light" href="#welcome">Explore the venue <span>↓</span></a></div>
     </div>
     <div class="hero-note">Oriental Heritage Hall <span>·</span> London, UK</div>
     <form class="hero-enquiry" id="hero-enquiry" data-hero-enquiry action="{{ route('enquire.store') }}" method="POST">
