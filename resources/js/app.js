@@ -1,6 +1,6 @@
 import './bootstrap';
 const $=(s,p=document)=>p.querySelector(s), $$=(s,p=document)=>[...p.querySelectorAll(s)];
-const header=$('[data-header]'); window.addEventListener('scroll',()=>header?.classList.toggle('scrolled',scrollY>30),{passive:true});
+const header=$('[data-header]'), hero=$('.hero'); const syncHeader=()=>{if(!header)return;header.classList.toggle('scrolled',scrollY>30);header.classList.toggle('light-header',!!hero&&scrollY>hero.offsetHeight-100)}; syncHeader(); window.addEventListener('scroll',syncHeader,{passive:true});
 const toggle=$('[data-menu-toggle]'), menu=$('[data-mobile-menu]'); toggle?.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open)}); $$('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>menu?.classList.remove('open')));
 const modal=$('[data-tour-modal]'); const closeModal=()=>{if(modal){modal.hidden=true;document.body.style.overflow=''}}; $$('[data-tour-open]').forEach(b=>b.addEventListener('click',()=>{modal.hidden=false;document.body.style.overflow='hidden';$('[data-tour-close]',modal)?.focus()})); $$('[data-tour-close]').forEach(b=>b.addEventListener('click',closeModal)); document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();$('[data-lightbox]')?.setAttribute('hidden','')}});
 const banner=$('[data-cookie-banner]'); if(localStorage.getItem('ohh-cookie-choice')) banner?.remove(); $$('[data-cookie]').forEach(b=>b.addEventListener('click',()=>{localStorage.setItem('ohh-cookie-choice',b.dataset.cookie);banner?.remove()}));
