@@ -23,8 +23,8 @@
                     @if(count($item['links']) > 1)
                         <section class="menu-panel @if($loop->first) active @endif" data-menu-panel="{{ $item['key'] }}" @if(!$loop->first) hidden @endif>
                             <div class="menu-panel-copy"><p class="eyebrow light">{{ $item['label'] }}</p><h2>{{ $item['label'] }}</h2><p>{{ $item['intro'] }}</p><a class="menu-view-all" href="{{ $item['links'][0]['href'] }}">View all {{ strtolower($item['label']) }} <span>↗</span></a></div>
-                            <div class="menu-panel-links">@foreach(array_slice($item['links'], 1) as $link)<a href="{{ $link['href'] }}">{{ $link['label'] }} <span>↗</span></a>@endforeach</div>
-                            <div class="menu-featured"><img src="{{ asset($item['image']) }}" alt="{{ $item['label'] }} at Oriental Heritage Hall" loading="lazy"></div>
+                            <div class="menu-panel-links">@foreach(array_slice($item['links'], 1) as $link)<a href="{{ $link['href'] }}" data-menu-image="{{ asset($link['image'] ?? $item['image']) }}" data-menu-image-alt="{{ $link['label'] }} at Oriental Heritage Hall">{{ $link['label'] }} <span>↗</span></a>@endforeach</div>
+                            <div class="menu-featured"><img src="{{ asset($item['image']) }}" data-menu-featured data-default-image="{{ asset($item['image']) }}" alt="{{ $item['label'] }} at Oriental Heritage Hall" loading="lazy"></div>
                         </section>
                     @endif
                 @endforeach
