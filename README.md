@@ -59,3 +59,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 # orientalheritagehall
+
+## Vercel deployment
+
+The repository includes a Vercel PHP entrypoint and `vercel.json`. In the Vercel project settings, add these environment variables before the first live request:
+
+- `APP_KEY` — generate with `php artisan key:generate --show`
+- `APP_URL` — the deployed Vercel URL
+- `SESSION_DRIVER=cookie`
+- `CACHE_STORE=array`
+
+The build command installs Composer dependencies and compiles the Vite assets automatically.
