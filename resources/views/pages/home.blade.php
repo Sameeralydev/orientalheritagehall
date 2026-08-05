@@ -1,6 +1,31 @@
 @extends('layouts.app')
 @section('content')
-<section class="hero"><div class="hero-media"></div><div class="hero-overlay"></div><div class="container hero-content"><p class="eyebrow light reveal">A distinguished London venue</p><h1 class="reveal delay-1">Celebrations<br><em>shaped by heritage.</em></h1><p class="hero-copy reveal delay-2">An exceptional setting for weddings, corporate occasions and unforgettable private celebrations.</p><div class="hero-buttons reveal delay-3"><a class="button" href="{{ route('page','contact') }}">Check availability <span>↗</span></a><a class="text-link light" href="#welcome">Explore the venue <span>↓</span></a></div></div><div class="hero-note">Oriental Heritage Hall <span>·</span> London, UK</div></section>
+<section class="hero" aria-label="Oriental Heritage Hall hero">
+    <div class="hero-media"><video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="{{ asset('weddingimg.webp') }}"><source src="{{ asset('herovideo.mp4') }}" type="video/mp4"></video></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <p class="eyebrow light reveal">A distinguished London venue</p>
+        <div class="hero-stars reveal delay-1" aria-label="Five star venue">★★★★★</div>
+        <h1 class="reveal delay-1">Welcome to a luxury wedding<br><em>venue like no other.</em></h1>
+        <p class="hero-copy reveal delay-2">An exceptional setting for weddings, corporate occasions and unforgettable private celebrations.</p>
+        <div class="hero-buttons reveal delay-3"><a class="button" href="#hero-enquiry">Check availability <span>↗</span></a><a class="text-link light" href="#welcome">Explore the venue <span>↓</span></a></div>
+    </div>
+    <div class="hero-note">Oriental Heritage Hall <span>·</span> London, UK</div>
+    <form class="hero-enquiry" id="hero-enquiry" data-hero-enquiry action="{{ route('enquire.store') }}" method="POST">
+        @csrf
+        <div class="hero-form-field"><label for="hero-date">Event date</label><input id="hero-date" type="date" name="preferred_date"></div>
+        <div class="hero-form-field"><label for="hero-guests">No. of guests</label><input id="hero-guests" type="number" name="guests" min="1" max="2000" placeholder="Guests" required></div>
+        <div class="hero-form-field"><label for="hero-name">First name</label><input id="hero-name" name="name" placeholder="First name" required></div>
+        <div class="hero-form-field"><label for="hero-email">Email</label><input id="hero-email" type="email" name="email" placeholder="Email address" required></div>
+        <button class="button hero-next" type="button" data-enquiry-next>Next <span>↗</span></button>
+        <div class="enquiry-modal" data-enquiry-modal hidden role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
+            <div class="enquiry-dialog"><button class="enquiry-close" type="button" data-enquiry-close aria-label="Close enquiry">×</button><p class="eyebrow">Make an enquiry</p><h2 id="enquiry-title">Last few questions</h2><p class="modal-intro">Complete our short form and we’ll be in touch.</p>
+                <div class="hero-modal-grid"><label>Phone number<input name="phone" placeholder="07xxx xxxxxx" required></label><label>Event type<select name="event_type" required><option value="">Select event type</option><option>Wedding</option><option>Corporate event</option><option>Private party</option></select></label><label class="full">How can we assist you?<textarea name="message" rows="4" placeholder="Tell us a little about your plans"></textarea></label></div>
+                <label class="consent"><input type="checkbox" name="consent" required> I consent to Oriental Heritage Hall using these details to respond to my enquiry.</label><button class="button modal-submit" type="submit">Send enquiry <span>↗</span></button>
+            </div>
+        </div>
+    </form>
+</section>
 <section class="event-nav"><div class="container event-grid"><a href="{{ route('page','weddings') }}"><small>01</small><span>Weddings</span><b>↗</b></a><a href="{{ route('page','corporate') }}"><small>02</small><span>Corporate events</span><b>↗</b></a><a href="{{ route('page','parties') }}"><small>03</small><span>Private parties</span><b>↗</b></a></div></section>
 <section class="section welcome" id="welcome"><div class="container split"><div><p class="eyebrow">Welcome to Oriental Heritage Hall</p><h2>A setting for <em>significant</em> moments.</h2></div><div><p class="lead">There is a certain feeling when you enter a room made for the occasion. At Oriental Heritage Hall, generous space, thoughtful detail and warm hospitality come together to make every gathering feel entirely your own.</p><a class="arrow-link" href="{{ route('page','about') }}">Discover our approach <span>→</span></a></div></div></section>
 <section class="capacity-band"><div class="container"><div class="band-heading"><div><p class="eyebrow light">Designed around your occasion</p><h2>Room to gather,<br><em>space to make it yours.</em></h2></div><a class="button button-outline" href="{{ route('page','spaces') }}">Explore spaces</a></div><div class="stats">@foreach(config('venue.capacity') as $stat)<div class="stat"><strong>{{ $stat['value'] }}</strong><span>{{ $stat['label'] }}</span></div>@endforeach</div></div></section>
