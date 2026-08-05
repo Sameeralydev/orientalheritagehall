@@ -69,4 +69,4 @@ The repository includes a Vercel PHP entrypoint and `vercel.json`. In the Vercel
 - `SESSION_DRIVER=cookie`
 - `CACHE_STORE=array`
 
-The build command installs Composer dependencies and compiles the Vite assets automatically.
+Vercel compiles the Vite assets with `npm run build`; the configured PHP runtime handles the Composer application dependencies for the serverless function.
