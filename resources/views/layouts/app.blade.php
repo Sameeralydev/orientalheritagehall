@@ -2,6 +2,8 @@
 <html lang="en-GB">
 <head>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpeg" href="{{ asset('orientalheritagehall.jpeg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('orientalheritagehall.jpeg') }}">
     <title>{{ $metaTitle ?? config('venue.name').' | London wedding & events venue' }}</title>
     <meta name="description" content="{{ $metaDescription ?? 'A distinguished London setting for weddings, corporate occasions and unforgettable private celebrations.' }}">
     <link rel="canonical" href="{{ url()->current() }}">
