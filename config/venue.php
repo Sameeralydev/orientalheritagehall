@@ -35,6 +35,7 @@ return [
         ['title' => 'The details guests remember', 'category' => 'Décor and Stages', 'class' => 'media-gallery-3', 'image' => '/grand-hall.png'],
         ['title' => 'An evening in the making', 'category' => 'Private Parties', 'class' => 'media-gallery-4', 'image' => '/heritage-suite.png'],
         ['title' => 'Gather around the table', 'category' => 'Food and Catering', 'class' => 'media-gallery-5', 'image' => '/cuisine-feature.png'],
+        ['title' => 'Live stations, beautifully served', 'category' => 'Food and Catering', 'class' => 'media-gallery-5', 'image' => '/food-station-feature.png'],
         ['title' => 'A room for every occasion', 'category' => 'Corporate', 'class' => 'media-gallery-6', 'image' => '/grand-hall.png'],
         ['title' => 'A ceremony with character', 'category' => 'Mehndi', 'class' => 'media-gallery-3', 'image' => '/grand-hall.png'],
         ['title' => 'A graceful reception', 'category' => 'Walima', 'class' => 'media-gallery-2', 'image' => '/weddingimg.webp'],
