@@ -70,3 +70,5 @@ The repository includes a Vercel PHP entrypoint and `vercel.json`. In the Vercel
 - `CACHE_STORE=array`
 
 Vercel compiles the Vite assets with `npm run build`; the configured PHP runtime handles the Composer application dependencies for the serverless function.
+
+The `APP_KEY` value is required for encrypted cookies and enquiry sessions; do not commit it to GitHub.
