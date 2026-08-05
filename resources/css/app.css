@@ -7,4 +7,6 @@
 .site-header.scrolled{background:rgba(45,37,37,.9);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.14);backdrop-filter:blur(10px)}
 .site-header.light-header{background:rgba(251,249,246,.96);color:var(--ink);box-shadow:0 1px 0 var(--line)}
 .brand{background:transparent;mix-blend-mode:multiply}
+.review-section{position:relative;background-image:linear-gradient(90deg,rgba(37,24,23,.78),rgba(37,24,23,.48)),url('/weddingimg.webp');background-size:cover;background-position:center 42%;color:#fff;overflow:hidden}
+.review-section .review-empty{position:relative;z-index:1}.review-section .review-empty .eyebrow{color:#e1bc69}.review-section .review-empty h2{color:#fff}.review-section .review-empty .muted{color:#f0e6dd}.review-section .review-empty .arrow-link{color:#fff;border-color:#d7b26a}
 .reveal{opacity:0;transform:translateY(18px);animation:rise .8s ease forwards}.delay-1{animation-delay:.15s}.delay-2{animation-delay:.28s}.delay-3{animation-delay:.4s}@keyframes rise{to{opacity:1;transform:none}}
