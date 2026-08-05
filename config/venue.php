@@ -19,9 +19,9 @@ return [
         ['value' => 'Tailored', 'label' => 'Décor packages'],
     ],
     'spaces' => [
-        ['name' => 'The Grand Hall', 'label' => 'A generous canvas', 'description' => 'A versatile, beautifully proportioned setting for ceremonies, receptions and large-scale celebrations.', 'class' => 'media-grand'],
-        ['name' => 'The Heritage Suite', 'label' => 'Intimate occasions', 'description' => 'A considered room for private dinners, family gatherings and smaller celebrations.', 'class' => 'media-suite'],
-        ['name' => 'The Arrival Gallery', 'label' => 'First impressions', 'description' => 'A memorable entrance sequence for welcome drinks, photographs and a graceful guest arrival.', 'class' => 'media-arrival'],
+        ['name' => 'The Grand Hall', 'label' => 'A generous canvas', 'description' => 'A versatile, beautifully proportioned setting for ceremonies, receptions and large-scale celebrations.', 'class' => 'media-grand', 'image' => '/grand-hall.png'],
+        ['name' => 'The Heritage Suite', 'label' => 'Intimate occasions', 'description' => 'A considered room for private dinners, family gatherings and smaller celebrations.', 'class' => 'media-suite', 'image' => '/heritage-suite.png'],
+        ['name' => 'The Arrival Gallery', 'label' => 'First impressions', 'description' => 'A memorable entrance sequence for welcome drinks, photographs and a graceful guest arrival.', 'class' => 'media-arrival', 'image' => '/arrival-gallery.png'],
     ],
     'packages' => [
         ['name' => 'Silver', 'intro' => 'A considered foundation for an elegant celebration.', 'items' => ['Venue hire', 'Flexible guest capacity', 'Catering consultation', 'Essential stage provision', 'Event coordination']],
