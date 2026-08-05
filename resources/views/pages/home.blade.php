@@ -13,12 +13,12 @@
         @csrf
         <div class="hero-form-field"><label for="hero-date">Event date</label><input id="hero-date" type="date" name="preferred_date"></div>
         <div class="hero-form-field"><label for="hero-guests">No. of guests</label><input id="hero-guests" type="number" name="guests" min="1" max="2000" placeholder="Guests" required></div>
-        <div class="hero-form-field"><label for="hero-name">First name</label><input id="hero-name" name="name" placeholder="First name" required></div>
-        <div class="hero-form-field"><label for="hero-email">Email</label><input id="hero-email" type="email" name="email" placeholder="Email address" required></div>
+        <div class="hero-form-field"><label for="hero-name">First name</label><input id="hero-name" name="name" placeholder="First name"></div>
+        <div class="hero-form-field"><label for="hero-email">Email</label><input id="hero-email" type="email" name="email" placeholder="Email address"></div>
         <button class="button hero-next" type="button" data-enquiry-next>Next <span>↗</span></button>
         <div class="enquiry-modal" data-enquiry-modal hidden role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
             <div class="enquiry-dialog"><button class="enquiry-close" type="button" data-enquiry-close aria-label="Close enquiry">×</button><p class="eyebrow">Make an enquiry</p><h2 id="enquiry-title">Last few questions</h2><p class="modal-intro">Complete our short form and we’ll be in touch.</p>
-                <div class="hero-modal-grid"><label>Phone number<input name="phone" placeholder="07xxx xxxxxx" required></label><label>Event type<select name="event_type" required><option value="">Select event type</option><option>Wedding</option><option>Corporate event</option><option>Private party</option></select></label><label class="full">How can we assist you?<textarea name="message" rows="4" placeholder="Tell us a little about your plans"></textarea></label></div>
+                <div class="hero-modal-grid"><label>First name<input name="name" placeholder="First name" required></label><label>Email<input type="email" name="email" placeholder="Email address" required></label><label>Phone number<input name="phone" placeholder="07xxx xxxxxx" required></label><label>Event type<select name="event_type" required><option value="">Select event type</option><option>Wedding</option><option>Corporate event</option><option>Private party</option></select></label><label class="full">How can we assist you?<textarea name="message" rows="4" placeholder="Tell us a little about your plans"></textarea></label></div>
                 <label class="consent"><input type="checkbox" name="consent" required> I consent to Oriental Heritage Hall using these details to respond to my enquiry.</label><button class="button modal-submit" type="submit">Send enquiry <span>↗</span></button>
             </div>
         </div>
